@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>toast</title>
+  <style>
+    *, :after, :before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    a, a:focus, a:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .essage-container {
+      position: fixed;
+      left: 30px;
+      bottom: 30px;
+      margin: 0;
+      padding: 0;
+      z-index: 10010;
+    }
+
+    .essage {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      position: relative;
+      width: 300px;
+      padding: 12px 50px 12px 46px;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+      background-color: #FFF;
+      border-left-style: solid;
+      border-left-width: 4px;
+      border-radius: 3px;
+      box-shadow: 0 7px 21px 0 rgba(0, 0, 0, .15);
+      color: #383838;
+    }
+
+    .essage + .essage {
+      margin-top: 20px;
+    }
+
+    .essage.essage-success {
+      border-left-color: #3DA8F5;
+    }
+
+    .icon {
+      display: inline-block;
+      font-stretch: normal;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      speak: none;
+      text-transform: none;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon {
+      vertical-align: top;
+    }
+
+    .essage .essage-status {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      height: 16px;
+      width: 16px;
+      font-size: 16px;
+      line-height: 16px;
+      color: #FFF;
+    }
+
+    .essage.essage-success .essage-status {
+      color: #FFF;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #3DA8F5;
+    }
+
+    .icon-state-check:before {
+      content: "√";
+    }
+
+    .essage .essage-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      height: 12px;
+      width: 12px;
+      font-size: 12px;
+      line-height: 12px;
+      color: #A2ABB8;
+    }
+
+    .icon-remove:before {
+      content: "×";
+    }
+  </style>
+</head>
+<body>
+<ul class="essage-container">
+  <li class="essage essage-success" style="bottom: 0px; opacity: 1; margin-bottom: 0px;">
+    <i class="essage-status icon icon-state-check"></i>
+
+    <div class="essage-text">删除成功</div>
+    <a class="essage-close"><i class="icon icon-remove"></i></a>
+  </li>
+</ul>
+</body>
+</html>
