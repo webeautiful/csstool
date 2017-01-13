@@ -1,0 +1,85 @@
+/**
+ * 清除浮动
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * flexbox布局
+ */
+.flexbox {
+  display: flex;
+}
+.flex {
+  flex: 1;
+}
+
+/**
+ * 垂直方向居中
+ * https://tympanus.net/codrops/css_reference/flexbox/#section_align-items
+ */
+
+//1. 使用flex实现
+.vertical-center {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//或 (有待确认)
+.vertical-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+//2. 使用table-cell实现元素垂直居中
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/**
+* tranform: translate(x, y)  修正居中定位，适配各种屏幕尺寸
+*/
+.horizonal-center {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/**
+* 超长内容自动显示省略号
+*/
+.text-overflow {
+  display: block;
+  word-break: keep-all;
+  white-space: nowrap; //让文本不换行
+  overflow: hidden; //隐藏溢出文本
+  text-overflow: ellipsis;
+}
+span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 10em; /*最多10字符宽*/
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.red-dot:after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #ed1c24;
+  border-radius: 50%;
+}
