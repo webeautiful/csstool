@@ -83,3 +83,10 @@ span {
   background-color: #ed1c24;
   border-radius: 50%;
 }
+
+/**
+ * CSS3计算calc和vw单位巧妙实现滚动条出现页面不跳动
+ */
+.wrap-outer {
+  margin-left: calc(100vw - 100%);
+}
