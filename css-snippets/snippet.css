@@ -90,3 +90,34 @@ span {
 .wrap-outer {
   margin-left: calc(100vw - 100%);
 }
+
+/**
+ * 隔行换色表格
+ */
+table {
+  border-spacing: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+table>thead {
+  font-size: 14px;
+  color: #93a4aa;
+}
+table>thead>tr{
+  background-color: #e1eef3;
+}
+table>thead>tr>th,
+table>tbody>tr>td{
+  padding-left: 11px;
+  line-height: 1.74;
+  max-width: 316px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+table>tbody {
+  font-size: 12px;
+  color: #666666;
+}
+table>tbody>tr:nth-of-type(odd) {
+  background-color: #f6fafb;
+}
